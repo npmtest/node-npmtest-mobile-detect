@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-mobile-detect/mobile-detect/mobile-detect.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-mobile-detect/node_modules/mobile-detect/mobile-detect.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-mobile-detect">npmtest-mobile-detect (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-mobile-detect/mobile-detect/mobile-detect.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-mobile-detect/node_modules/mobile-detect/mobile-detect.js</span></h1>
     <h2>
         
         Statements: <span class="metric">33.33% <small>(58 / 174)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-mobile-detect/mobile-detect/</a> &#187; mobile-detect.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-mobile-detect/node_modules/mobile-detect/</a> » mobile-detect.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -2499,29 +2497,29 @@ define(function () {
     impl.FALLBACK_MOBILE = 'UnknownMobile';
 &nbsp;
     isArray = ('isArray' in Array) ?
-        Array.isArray : <span class="fstat-no" title="function not covered" ><span class="branch-1 cbranch-no" title="branch not covered" >function (value) {</span> <span class="cstat-no" title="statement not covered" >return Object.prototype.toString.call(value) === '[object Array]'; </span>};</span>
+        Array.isArray : <span class="fstat-no" title="function not covered"><span class="branch-1 cbranch-no" title="branch not covered">function (value) {</span> <span class="cstat-no" title="statement not covered">return Object.prototype.toString.call(value) === '[object Array]'; </span>};</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function equalIC(a, b) {</span>
-<span class="cstat-no" title="statement not covered" >        return a != null &amp;&amp; b != null &amp;&amp; a.toLowerCase() === b.toLowerCase();</span>
+<span class="fstat-no" title="function not covered">    function equalIC(a, b) {</span>
+<span class="cstat-no" title="statement not covered">        return a != null &amp;&amp; b != null &amp;&amp; a.toLowerCase() === b.toLowerCase();</span>
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    function containsIC(array, value) {</span>
-<span class="cstat-no" title="statement not covered" >        var valueLC, i, len = array.length;</span>
-<span class="cstat-no" title="statement not covered" >        if (!len || !value) {</span>
-<span class="cstat-no" title="statement not covered" >            return false;</span>
+<span class="fstat-no" title="function not covered">    function containsIC(array, value) {</span>
+<span class="cstat-no" title="statement not covered">        var valueLC, i, len = array.length;</span>
+<span class="cstat-no" title="statement not covered">        if (!len || !value) {</span>
+<span class="cstat-no" title="statement not covered">            return false;</span>
         }
-<span class="cstat-no" title="statement not covered" >        valueLC = value.toLowerCase();</span>
-<span class="cstat-no" title="statement not covered" >        for (i = 0; i &lt; len; ++i) {</span>
-<span class="cstat-no" title="statement not covered" >            if (valueLC === array[i].toLowerCase()) {</span>
-<span class="cstat-no" title="statement not covered" >                return true;</span>
+<span class="cstat-no" title="statement not covered">        valueLC = value.toLowerCase();</span>
+<span class="cstat-no" title="statement not covered">        for (i = 0; i &lt; len; ++i) {</span>
+<span class="cstat-no" title="statement not covered">            if (valueLC === array[i].toLowerCase()) {</span>
+<span class="cstat-no" title="statement not covered">                return true;</span>
             }
         }
-<span class="cstat-no" title="statement not covered" >        return false;</span>
+<span class="cstat-no" title="statement not covered">        return false;</span>
     }
 &nbsp;
     function convertPropsToRegExp(object) {
         for (var key in object) {
-            <span class="missing-if-branch" title="else path not taken" >E</span>if (hasOwnProp.call(object, key)) {
+            <span class="missing-if-branch" title="else path not taken">E</span>if (hasOwnProp.call(object, key)) {
                 object[key] = new RegExp(object[key], 'i');
             }
         }
@@ -2530,7 +2528,7 @@ define(function () {
     (function init() {
         var key, values, value, i, len, verPos, mobileDetectRules = impl.mobileDetectRules;
         for (key in mobileDetectRules.props) {
-            <span class="missing-if-branch" title="else path not taken" >E</span>if (hasOwnProp.call(mobileDetectRules.props, key)) {
+            <span class="missing-if-branch" title="else path not taken">E</span>if (hasOwnProp.call(mobileDetectRules.props, key)) {
                 values = mobileDetectRules.props[key];
                 if (!isArray(values)) {
                     values = [values];
@@ -2539,7 +2537,7 @@ define(function () {
                 for (i = 0; i &lt; len; ++i) {
                     value = values[i];
                     verPos = value.indexOf('[VER]');
-                    <span class="missing-if-branch" title="else path not taken" >E</span>if (verPos &gt;= 0) {
+                    <span class="missing-if-branch" title="else path not taken">E</span>if (verPos &gt;= 0) {
                         value = value.substring(0, verPos) + '([\\w._\\+]+)' + value.substring(verPos + 5);
                     }
                     values[i] = new RegExp(value, 'i');
@@ -2567,15 +2565,15 @@ define(function () {
      * @returns {String|null} the matched key if found, otherwise &lt;tt&gt;null&lt;/tt&gt;
      * @private
      */
-    impl.findMatch = <span class="fstat-no" title="function not covered" >function(rules, userAgent) {</span>
-<span class="cstat-no" title="statement not covered" >        for (var key in rules) {</span>
-<span class="cstat-no" title="statement not covered" >            if (hasOwnProp.call(rules, key)) {</span>
-<span class="cstat-no" title="statement not covered" >                if (rules[key].test(userAgent)) {</span>
-<span class="cstat-no" title="statement not covered" >                    return key;</span>
+    impl.findMatch = <span class="fstat-no" title="function not covered">function(rules, userAgent) {</span>
+<span class="cstat-no" title="statement not covered">        for (var key in rules) {</span>
+<span class="cstat-no" title="statement not covered">            if (hasOwnProp.call(rules, key)) {</span>
+<span class="cstat-no" title="statement not covered">                if (rules[key].test(userAgent)) {</span>
+<span class="cstat-no" title="statement not covered">                    return key;</span>
                 }
             }
         }
-<span class="cstat-no" title="statement not covered" >        return null;</span>
+<span class="cstat-no" title="statement not covered">        return null;</span>
     };
 &nbsp;
     /**
@@ -2585,16 +2583,16 @@ define(function () {
      * @returns {Array} an array of matched keys, may be empty when there is no match, but not &lt;tt&gt;null&lt;/tt&gt;
      * @private
      */
-    impl.findMatches = <span class="fstat-no" title="function not covered" >function(rules, userAgent) {</span>
-<span class="cstat-no" title="statement not covered" >        var result = [];</span>
-<span class="cstat-no" title="statement not covered" >        for (var key in rules) {</span>
-<span class="cstat-no" title="statement not covered" >            if (hasOwnProp.call(rules, key)) {</span>
-<span class="cstat-no" title="statement not covered" >                if (rules[key].test(userAgent)) {</span>
-<span class="cstat-no" title="statement not covered" >                    result.push(key);</span>
+    impl.findMatches = <span class="fstat-no" title="function not covered">function(rules, userAgent) {</span>
+<span class="cstat-no" title="statement not covered">        var result = [];</span>
+<span class="cstat-no" title="statement not covered">        for (var key in rules) {</span>
+<span class="cstat-no" title="statement not covered">            if (hasOwnProp.call(rules, key)) {</span>
+<span class="cstat-no" title="statement not covered">                if (rules[key].test(userAgent)) {</span>
+<span class="cstat-no" title="statement not covered">                    result.push(key);</span>
                 }
             }
         }
-<span class="cstat-no" title="statement not covered" >        return result;</span>
+<span class="cstat-no" title="statement not covered">        return result;</span>
     };
 &nbsp;
     /**
@@ -2605,19 +2603,19 @@ define(function () {
      * @return {String} version or &lt;tt&gt;null&lt;/tt&gt; if version not found
      * @private
      */
-    impl.getVersionStr = <span class="fstat-no" title="function not covered" >function (propertyName, userAgent) {</span>
-<span class="cstat-no" title="statement not covered" >        var props = impl.mobileDetectRules.props, patterns, i, len, match;</span>
-<span class="cstat-no" title="statement not covered" >        if (hasOwnProp.call(props, propertyName)) {</span>
-<span class="cstat-no" title="statement not covered" >            patterns = props[propertyName];</span>
-<span class="cstat-no" title="statement not covered" >            len = patterns.length;</span>
-<span class="cstat-no" title="statement not covered" >            for (i = 0; i &lt; len; ++i) {</span>
-<span class="cstat-no" title="statement not covered" >                match = patterns[i].exec(userAgent);</span>
-<span class="cstat-no" title="statement not covered" >                if (match !== null) {</span>
-<span class="cstat-no" title="statement not covered" >                    return match[1];</span>
+    impl.getVersionStr = <span class="fstat-no" title="function not covered">function (propertyName, userAgent) {</span>
+<span class="cstat-no" title="statement not covered">        var props = impl.mobileDetectRules.props, patterns, i, len, match;</span>
+<span class="cstat-no" title="statement not covered">        if (hasOwnProp.call(props, propertyName)) {</span>
+<span class="cstat-no" title="statement not covered">            patterns = props[propertyName];</span>
+<span class="cstat-no" title="statement not covered">            len = patterns.length;</span>
+<span class="cstat-no" title="statement not covered">            for (i = 0; i &lt; len; ++i) {</span>
+<span class="cstat-no" title="statement not covered">                match = patterns[i].exec(userAgent);</span>
+<span class="cstat-no" title="statement not covered">                if (match !== null) {</span>
+<span class="cstat-no" title="statement not covered">                    return match[1];</span>
                 }
             }
         }
-<span class="cstat-no" title="statement not covered" >        return null;</span>
+<span class="cstat-no" title="statement not covered">        return null;</span>
     };
 &nbsp;
     /**
@@ -2629,9 +2627,9 @@ define(function () {
      * @return {Number} version or &lt;tt&gt;NaN&lt;/tt&gt; if version not found
      * @private
      */
-    impl.getVersion = <span class="fstat-no" title="function not covered" >function (propertyName, userAgent) {</span>
-<span class="cstat-no" title="statement not covered" >        var version = impl.getVersionStr(propertyName, userAgent);</span>
-<span class="cstat-no" title="statement not covered" >        return version ? impl.prepareVersionNo(version) : NaN;</span>
+    impl.getVersion = <span class="fstat-no" title="function not covered">function (propertyName, userAgent) {</span>
+<span class="cstat-no" title="statement not covered">        var version = impl.getVersionStr(propertyName, userAgent);</span>
+<span class="cstat-no" title="statement not covered">        return version ? impl.prepareVersionNo(version) : NaN;</span>
     };
 &nbsp;
     /**
@@ -2641,75 +2639,75 @@ define(function () {
      * @return {Number} the version number as a floating number
      * @private
      */
-    impl.prepareVersionNo = <span class="fstat-no" title="function not covered" >function (version) {</span>
-<span class="cstat-no" title="statement not covered" >        var numbers;</span>
+    impl.prepareVersionNo = <span class="fstat-no" title="function not covered">function (version) {</span>
+<span class="cstat-no" title="statement not covered">        var numbers;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        numbers = version.split(/[a-z._ \/\-]/i);</span>
-<span class="cstat-no" title="statement not covered" >        if (numbers.length === 1) {</span>
-<span class="cstat-no" title="statement not covered" >            version = numbers[0];</span>
+<span class="cstat-no" title="statement not covered">        numbers = version.split(/[a-z._ \/\-]/i);</span>
+<span class="cstat-no" title="statement not covered">        if (numbers.length === 1) {</span>
+<span class="cstat-no" title="statement not covered">            version = numbers[0];</span>
         }
-<span class="cstat-no" title="statement not covered" >        if (numbers.length &gt; 1) {</span>
-<span class="cstat-no" title="statement not covered" >            version = numbers[0] + '.';</span>
-<span class="cstat-no" title="statement not covered" >            numbers.shift();</span>
-<span class="cstat-no" title="statement not covered" >            version += numbers.join('');</span>
+<span class="cstat-no" title="statement not covered">        if (numbers.length &gt; 1) {</span>
+<span class="cstat-no" title="statement not covered">            version = numbers[0] + '.';</span>
+<span class="cstat-no" title="statement not covered">            numbers.shift();</span>
+<span class="cstat-no" title="statement not covered">            version += numbers.join('');</span>
         }
-<span class="cstat-no" title="statement not covered" >        return Number(version);</span>
+<span class="cstat-no" title="statement not covered">        return Number(version);</span>
     };
 &nbsp;
-    impl.isMobileFallback = <span class="fstat-no" title="function not covered" >function (userAgent) {</span>
-<span class="cstat-no" title="statement not covered" >        return impl.detectMobileBrowsers.fullPattern.test(userAgent) ||</span>
+    impl.isMobileFallback = <span class="fstat-no" title="function not covered">function (userAgent) {</span>
+<span class="cstat-no" title="statement not covered">        return impl.detectMobileBrowsers.fullPattern.test(userAgent) ||</span>
             impl.detectMobileBrowsers.shortPattern.test(userAgent.substr(0,4));
     };
 &nbsp;
-    impl.isTabletFallback = <span class="fstat-no" title="function not covered" >function (userAgent) {</span>
-<span class="cstat-no" title="statement not covered" >        return impl.detectMobileBrowsers.tabletPattern.test(userAgent);</span>
+    impl.isTabletFallback = <span class="fstat-no" title="function not covered">function (userAgent) {</span>
+<span class="cstat-no" title="statement not covered">        return impl.detectMobileBrowsers.tabletPattern.test(userAgent);</span>
     };
 &nbsp;
-    impl.prepareDetectionCache = <span class="fstat-no" title="function not covered" >function (cache, userAgent, maxPhoneWidth) {</span>
-<span class="cstat-no" title="statement not covered" >        if (cache.mobile !== undefined) {</span>
-<span class="cstat-no" title="statement not covered" >            return;</span>
+    impl.prepareDetectionCache = <span class="fstat-no" title="function not covered">function (cache, userAgent, maxPhoneWidth) {</span>
+<span class="cstat-no" title="statement not covered">        if (cache.mobile !== undefined) {</span>
+<span class="cstat-no" title="statement not covered">            return;</span>
         }
-<span class="cstat-no" title="statement not covered" >        var phone, tablet, phoneSized;</span>
+<span class="cstat-no" title="statement not covered">        var phone, tablet, phoneSized;</span>
 &nbsp;
         // first check for stronger tablet rules, then phone (see issue#5)
-<span class="cstat-no" title="statement not covered" >        tablet = impl.findMatch(impl.mobileDetectRules.tablets, userAgent);</span>
-<span class="cstat-no" title="statement not covered" >        if (tablet) {</span>
-<span class="cstat-no" title="statement not covered" >            cache.mobile = cache.tablet = tablet;</span>
-<span class="cstat-no" title="statement not covered" >            cache.phone = null;</span>
-<span class="cstat-no" title="statement not covered" >            return; </span>// unambiguously identified as tablet
+<span class="cstat-no" title="statement not covered">        tablet = impl.findMatch(impl.mobileDetectRules.tablets, userAgent);</span>
+<span class="cstat-no" title="statement not covered">        if (tablet) {</span>
+<span class="cstat-no" title="statement not covered">            cache.mobile = cache.tablet = tablet;</span>
+<span class="cstat-no" title="statement not covered">            cache.phone = null;</span>
+<span class="cstat-no" title="statement not covered">            return; </span>// unambiguously identified as tablet
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        phone = impl.findMatch(impl.mobileDetectRules.phones, userAgent);</span>
-<span class="cstat-no" title="statement not covered" >        if (phone) {</span>
-<span class="cstat-no" title="statement not covered" >            cache.mobile = cache.phone = phone;</span>
-<span class="cstat-no" title="statement not covered" >            cache.tablet = null;</span>
-<span class="cstat-no" title="statement not covered" >            return; </span>// unambiguously identified as phone
+<span class="cstat-no" title="statement not covered">        phone = impl.findMatch(impl.mobileDetectRules.phones, userAgent);</span>
+<span class="cstat-no" title="statement not covered">        if (phone) {</span>
+<span class="cstat-no" title="statement not covered">            cache.mobile = cache.phone = phone;</span>
+<span class="cstat-no" title="statement not covered">            cache.tablet = null;</span>
+<span class="cstat-no" title="statement not covered">            return; </span>// unambiguously identified as phone
         }
 &nbsp;
         // our rules haven't found a match -&gt; try more general fallback rules
-<span class="cstat-no" title="statement not covered" >        if (impl.isMobileFallback(userAgent)) {</span>
-<span class="cstat-no" title="statement not covered" >            phoneSized = MobileDetect.isPhoneSized(maxPhoneWidth);</span>
-<span class="cstat-no" title="statement not covered" >            if (phoneSized === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >                cache.mobile = impl.FALLBACK_MOBILE;</span>
-<span class="cstat-no" title="statement not covered" >                cache.tablet = cache.phone = null;</span>
-            } else <span class="cstat-no" title="statement not covered" >if (phoneSized) {</span>
-<span class="cstat-no" title="statement not covered" >                cache.mobile = cache.phone = impl.FALLBACK_PHONE;</span>
-<span class="cstat-no" title="statement not covered" >                cache.tablet = null;</span>
+<span class="cstat-no" title="statement not covered">        if (impl.isMobileFallback(userAgent)) {</span>
+<span class="cstat-no" title="statement not covered">            phoneSized = MobileDetect.isPhoneSized(maxPhoneWidth);</span>
+<span class="cstat-no" title="statement not covered">            if (phoneSized === undefined) {</span>
+<span class="cstat-no" title="statement not covered">                cache.mobile = impl.FALLBACK_MOBILE;</span>
+<span class="cstat-no" title="statement not covered">                cache.tablet = cache.phone = null;</span>
+            } else <span class="cstat-no" title="statement not covered">if (phoneSized) {</span>
+<span class="cstat-no" title="statement not covered">                cache.mobile = cache.phone = impl.FALLBACK_PHONE;</span>
+<span class="cstat-no" title="statement not covered">                cache.tablet = null;</span>
             } else {
-<span class="cstat-no" title="statement not covered" >                cache.mobile = cache.tablet = impl.FALLBACK_TABLET;</span>
-<span class="cstat-no" title="statement not covered" >                cache.phone = null;</span>
+<span class="cstat-no" title="statement not covered">                cache.mobile = cache.tablet = impl.FALLBACK_TABLET;</span>
+<span class="cstat-no" title="statement not covered">                cache.phone = null;</span>
             }
-        } else <span class="cstat-no" title="statement not covered" >if (impl.isTabletFallback(userAgent)) {</span>
-<span class="cstat-no" title="statement not covered" >            cache.mobile = cache.tablet = impl.FALLBACK_TABLET;</span>
-<span class="cstat-no" title="statement not covered" >            cache.phone = null;</span>
+        } else <span class="cstat-no" title="statement not covered">if (impl.isTabletFallback(userAgent)) {</span>
+<span class="cstat-no" title="statement not covered">            cache.mobile = cache.tablet = impl.FALLBACK_TABLET;</span>
+<span class="cstat-no" title="statement not covered">            cache.phone = null;</span>
         } else {
             // not mobile at all!
-<span class="cstat-no" title="statement not covered" >            cache.mobile = cache.tablet = cache.phone = null;</span>
+<span class="cstat-no" title="statement not covered">            cache.mobile = cache.tablet = cache.phone = null;</span>
         }
     };
 &nbsp;
     // t is a reference to a MobileDetect instance
-    impl.mobileGrade = <span class="fstat-no" title="function not covered" >function (t) {</span>
+    impl.mobileGrade = <span class="fstat-no" title="function not covered">function (t) {</span>
         // impl note:
         // To keep in sync w/ Mobile_Detect.php easily, the following code is tightly aligned to the PHP version.
         // When changes are made in Mobile_Detect.php, copy this method and replace:
@@ -2718,9 +2716,9 @@ define(function () {
         //     , self::VERSION_TYPE_FLOAT / (nothing)
         //     isIOS() / os('iOS')
         //     [reg] / (nothing)   &lt;-- jsdelivr complaining about unescaped unicode character U+00AE
-<span class="cstat-no" title="statement not covered" >        var $isMobile = t.mobile() !== null;</span>
+<span class="cstat-no" title="statement not covered">        var $isMobile = t.mobile() !== null;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (</span>
+<span class="cstat-no" title="statement not covered">        if (</span>
             // Apple iOS 3.2-5.1 - Tested on the original iPad (4.3 / 5.0), iPad 2 (4.3), iPad 3 (5.1), original iPhone (3.1), iPhone 3 (3.2), 3GS (4.3), 4 (4.3 / 5.0), and 4S (5.1)
             t.os('iOS') &amp;&amp; t.version('iPad')&gt;=4.3 ||
             t.os('iOS') &amp;&amp; t.version('iPhone')&gt;=3.1 ||
@@ -2795,10 +2793,10 @@ define(function () {
             t.version('Opera')&gt;=10 &amp;&amp; !$isMobile
 &nbsp;
             ){
-<span class="cstat-no" title="statement not covered" >            return 'A';</span>
+<span class="cstat-no" title="statement not covered">            return 'A';</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (</span>
+<span class="cstat-no" title="statement not covered">        if (</span>
             t.os('iOS') &amp;&amp; t.version('iPad')&lt;4.3 ||
             t.os('iOS') &amp;&amp; t.version('iPhone')&lt;3.1 ||
             t.os('iOS') &amp;&amp; t.version('iPod')&lt;3.1 ||
@@ -2816,31 +2814,31 @@ define(function () {
             // @todo: report this (tested on Nokia N71)
             t.version('Opera Mobi')&gt;=11 &amp;&amp; t.is('SymbianOS')
             ){
-<span class="cstat-no" title="statement not covered" >            return 'B';</span>
+<span class="cstat-no" title="statement not covered">            return 'B';</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        if (</span>
+<span class="cstat-no" title="statement not covered">        if (</span>
         // Blackberry 4.x - Tested on the Curve 8330
             t.version('BlackBerry')&lt;5.0 ||
             // Windows Mobile - Tested on the HTC Leo (WinMo 5.2)
             t.match('MSIEMobile|Windows CE.*Mobile') || t.version('Windows Mobile')&lt;=5.2
 &nbsp;
             ){
-<span class="cstat-no" title="statement not covered" >            return 'C';</span>
+<span class="cstat-no" title="statement not covered">            return 'C';</span>
         }
 &nbsp;
         //All older smartphone platforms and featurephones - Any device that doesn't support media queries
         //will receive the basic, C grade experience.
-<span class="cstat-no" title="statement not covered" >        return 'C';</span>
+<span class="cstat-no" title="statement not covered">        return 'C';</span>
     };
 &nbsp;
-    impl.detectOS = <span class="fstat-no" title="function not covered" >function (ua) {</span>
-<span class="cstat-no" title="statement not covered" >        return impl.findMatch(impl.mobileDetectRules.oss0, ua) ||</span>
+    impl.detectOS = <span class="fstat-no" title="function not covered">function (ua) {</span>
+<span class="cstat-no" title="statement not covered">        return impl.findMatch(impl.mobileDetectRules.oss0, ua) ||</span>
             impl.findMatch(impl.mobileDetectRules.oss, ua);
     };
 &nbsp;
-    impl.getDeviceSmallerSide = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >        return window.screen.width &lt; window.screen.height ?</span>
+    impl.getDeviceSmallerSide = <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">        return window.screen.width &lt; window.screen.height ?</span>
             window.screen.width :
             window.screen.height;
     };
@@ -2872,11 +2870,11 @@ define(function () {
      * @constructor
      * @global
      */
-<span class="fstat-no" title="function not covered" >    function MobileDetect(userAgent, maxPhoneWidth) {</span>
-<span class="cstat-no" title="statement not covered" >        this.ua = userAgent || '';</span>
-<span class="cstat-no" title="statement not covered" >        this._cache = {};</span>
+<span class="fstat-no" title="function not covered">    function MobileDetect(userAgent, maxPhoneWidth) {</span>
+<span class="cstat-no" title="statement not covered">        this.ua = userAgent || '';</span>
+<span class="cstat-no" title="statement not covered">        this._cache = {};</span>
         //600dp is typical 7" tablet minimum width
-<span class="cstat-no" title="statement not covered" >        this.maxPhoneWidth = maxPhoneWidth || 600;</span>
+<span class="cstat-no" title="statement not covered">        this.maxPhoneWidth = maxPhoneWidth || 600;</span>
     }
 &nbsp;
     MobileDetect.prototype = {
@@ -2904,9 +2902,9 @@ define(function () {
          * @returns {String} the key for the phone family or tablet family, e.g. "Nexus".
          * @function MobileDetect#mobile
          */
-        mobile: <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >            impl.prepareDetectionCache(this._cache, this.ua, this.maxPhoneWidth);</span>
-<span class="cstat-no" title="statement not covered" >            return this._cache.mobile;</span>
+        mobile: <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">            impl.prepareDetectionCache(this._cache, this.ua, this.maxPhoneWidth);</span>
+<span class="cstat-no" title="statement not covered">            return this._cache.mobile;</span>
         },
 &nbsp;
         /**
@@ -2934,9 +2932,9 @@ define(function () {
          * @returns {String} the key of the phone family or producer, e.g. "iPhone"
          * @function MobileDetect#phone
          */
-        phone: <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >            impl.prepareDetectionCache(this._cache, this.ua, this.maxPhoneWidth);</span>
-<span class="cstat-no" title="statement not covered" >            return this._cache.phone;</span>
+        phone: <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">            impl.prepareDetectionCache(this._cache, this.ua, this.maxPhoneWidth);</span>
+<span class="cstat-no" title="statement not covered">            return this._cache.phone;</span>
         },
 &nbsp;
         /**
@@ -2983,9 +2981,9 @@ define(function () {
          * @returns {String} the key of the tablet family or producer, e.g. "SamsungTablet"
          * @function MobileDetect#tablet
          */
-        tablet: <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >            impl.prepareDetectionCache(this._cache, this.ua, this.maxPhoneWidth);</span>
-<span class="cstat-no" title="statement not covered" >            return this._cache.tablet;</span>
+        tablet: <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">            impl.prepareDetectionCache(this._cache, this.ua, this.maxPhoneWidth);</span>
+<span class="cstat-no" title="statement not covered">            return this._cache.tablet;</span>
         },
 &nbsp;
         /**
@@ -3004,11 +3002,11 @@ define(function () {
          * @returns {String} the key for the detected user-agent or &lt;tt&gt;null&lt;/tt&gt;
          * @function MobileDetect#userAgent
          */
-        userAgent: <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >            if (this._cache.userAgent === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >                this._cache.userAgent = impl.findMatch(impl.mobileDetectRules.uas, this.ua);</span>
+        userAgent: <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">            if (this._cache.userAgent === undefined) {</span>
+<span class="cstat-no" title="statement not covered">                this._cache.userAgent = impl.findMatch(impl.mobileDetectRules.uas, this.ua);</span>
             }
-<span class="cstat-no" title="statement not covered" >            return this._cache.userAgent;</span>
+<span class="cstat-no" title="statement not covered">            return this._cache.userAgent;</span>
         },
 &nbsp;
         /**
@@ -3027,11 +3025,11 @@ define(function () {
          * @returns {Array} the array of detected user-agent keys or &lt;tt&gt;[]&lt;/tt&gt;
          * @function MobileDetect#userAgents
          */
-        userAgents: <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >            if (this._cache.userAgents === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >                this._cache.userAgents = impl.findMatches(impl.mobileDetectRules.uas, this.ua);</span>
+        userAgents: <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">            if (this._cache.userAgents === undefined) {</span>
+<span class="cstat-no" title="statement not covered">                this._cache.userAgents = impl.findMatches(impl.mobileDetectRules.uas, this.ua);</span>
             }
-<span class="cstat-no" title="statement not covered" >            return this._cache.userAgents;</span>
+<span class="cstat-no" title="statement not covered">            return this._cache.userAgents;</span>
         },
 &nbsp;
         /**
@@ -3044,11 +3042,11 @@ define(function () {
          * @returns {String} the key for the detected operating system.
          * @function MobileDetect#os
          */
-        os: <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >            if (this._cache.os === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >                this._cache.os = impl.detectOS(this.ua);</span>
+        os: <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">            if (this._cache.os === undefined) {</span>
+<span class="cstat-no" title="statement not covered">                this._cache.os = impl.detectOS(this.ua);</span>
             }
-<span class="cstat-no" title="statement not covered" >            return this._cache.os;</span>
+<span class="cstat-no" title="statement not covered">            return this._cache.os;</span>
         },
 &nbsp;
         /**
@@ -3069,8 +3067,8 @@ define(function () {
          *          Be careful when comparing this value with '==' operator!
          * @function MobileDetect#version
          */
-        version: <span class="fstat-no" title="function not covered" >function (key) {</span>
-<span class="cstat-no" title="statement not covered" >            return impl.getVersion(key, this.ua);</span>
+        version: <span class="fstat-no" title="function not covered">function (key) {</span>
+<span class="cstat-no" title="statement not covered">            return impl.getVersion(key, this.ua);</span>
         },
 &nbsp;
         /**
@@ -3090,8 +3088,8 @@ define(function () {
          *
          * @function MobileDetect#versionStr
          */
-        versionStr: <span class="fstat-no" title="function not covered" >function (key) {</span>
-<span class="cstat-no" title="statement not covered" >            return impl.getVersionStr(key, this.ua);</span>
+        versionStr: <span class="fstat-no" title="function not covered">function (key) {</span>
+<span class="cstat-no" title="statement not covered">            return impl.getVersionStr(key, this.ua);</span>
         },
 &nbsp;
         /**
@@ -3108,8 +3106,8 @@ define(function () {
          *                    tablet or one of the listed additional keys, otherwise &lt;tt&gt;false&lt;/tt&gt;
          * @function MobileDetect#is
          */
-        is: <span class="fstat-no" title="function not covered" >function (key) {</span>
-<span class="cstat-no" title="statement not covered" >            return containsIC(this.userAgents(), key) ||</span>
+        is: <span class="fstat-no" title="function not covered">function (key) {</span>
+<span class="cstat-no" title="statement not covered">            return containsIC(this.userAgents(), key) ||</span>
                    equalIC(key, this.os()) ||
                    equalIC(key, this.phone()) ||
                    equalIC(key, this.tablet()) ||
@@ -3124,11 +3122,11 @@ define(function () {
          * @returns {boolean} &lt;tt&gt;true&lt;/tt&gt; when the pattern matches, otherwise &lt;tt&gt;false&lt;/tt&gt;
          * @function MobileDetect#match
          */
-        match: <span class="fstat-no" title="function not covered" >function (pattern) {</span>
-<span class="cstat-no" title="statement not covered" >            if (!(pattern instanceof RegExp)) {</span>
-<span class="cstat-no" title="statement not covered" >                pattern = new RegExp(pattern, 'i');</span>
+        match: <span class="fstat-no" title="function not covered">function (pattern) {</span>
+<span class="cstat-no" title="statement not covered">            if (!(pattern instanceof RegExp)) {</span>
+<span class="cstat-no" title="statement not covered">                pattern = new RegExp(pattern, 'i');</span>
             }
-<span class="cstat-no" title="statement not covered" >            return pattern.test(this.ua);</span>
+<span class="cstat-no" title="statement not covered">            return pattern.test(this.ua);</span>
         },
 &nbsp;
         /**
@@ -3141,8 +3139,8 @@ define(function () {
          *          when screen.width is less or equal to maxPhoneWidth, otherwise &lt;code&gt;false&lt;/code&gt;.&lt;br&gt;
          *          Will always return &lt;code&gt;undefined&lt;/code&gt; server-side.
          */
-        isPhoneSized: <span class="fstat-no" title="function not covered" >function (maxPhoneWidth) {</span>
-<span class="cstat-no" title="statement not covered" >            return MobileDetect.isPhoneSized(maxPhoneWidth || this.maxPhoneWidth);</span>
+        isPhoneSized: <span class="fstat-no" title="function not covered">function (maxPhoneWidth) {</span>
+<span class="cstat-no" title="statement not covered">            return MobileDetect.isPhoneSized(maxPhoneWidth || this.maxPhoneWidth);</span>
         },
 &nbsp;
         /**
@@ -3151,21 +3149,21 @@ define(function () {
          * @returns {String} one of the mobile grades ('A', 'B', 'C').
          * @function MobileDetect#mobileGrade
          */
-        mobileGrade: <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >            if (this._cache.grade === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >                this._cache.grade = impl.mobileGrade(this);</span>
+        mobileGrade: <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">            if (this._cache.grade === undefined) {</span>
+<span class="cstat-no" title="statement not covered">                this._cache.grade = impl.mobileGrade(this);</span>
             }
-<span class="cstat-no" title="statement not covered" >            return this._cache.grade;</span>
+<span class="cstat-no" title="statement not covered">            return this._cache.grade;</span>
         }
     };
 &nbsp;
     // environment-dependent
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof window !== 'undefined' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >window.screen)</span> {
-<span class="cstat-no" title="statement not covered" >        MobileDetect.isPhoneSized = <span class="fstat-no" title="function not covered" >function (maxPhoneWidth) {</span></span>
-<span class="cstat-no" title="statement not covered" >            return maxPhoneWidth &lt; 0 ? undefined : impl.getDeviceSmallerSide() &lt;= maxPhoneWidth;</span>
+    <span class="missing-if-branch" title="if path not taken">I</span>if (typeof window !== 'undefined' &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered">window.screen)</span> {
+<span class="cstat-no" title="statement not covered">        MobileDetect.isPhoneSized = <span class="fstat-no" title="function not covered">function (maxPhoneWidth) {</span></span>
+<span class="cstat-no" title="statement not covered">            return maxPhoneWidth &lt; 0 ? undefined : impl.getDeviceSmallerSide() &lt;= maxPhoneWidth;</span>
         };
     } else {
-        MobileDetect.isPhoneSized = <span class="fstat-no" title="function not covered" >function () {</span>};
+        MobileDetect.isPhoneSized = <span class="fstat-no" title="function not covered">function () {</span>};
     }
 &nbsp;
     // should not be replaced by a completely new object - just overwrite existing methods
@@ -3176,22 +3174,23 @@ define(function () {
     return MobileDetect;
 }); // end of call of define()
 })((function (undefined) {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (typeof module !== 'undefined' &amp;&amp; module.exports) {
+    <span class="missing-if-branch" title="else path not taken">E</span>if (typeof module !== 'undefined' &amp;&amp; module.exports) {
         return function (factory) { module.exports = factory(); };
-    } else <span class="cstat-no" title="statement not covered" >if (typeof define === 'function' &amp;&amp; define.amd) {</span>
-<span class="cstat-no" title="statement not covered" >        return define;</span>
-    } else <span class="cstat-no" title="statement not covered" >if (typeof window !== 'undefined') {</span>
-<span class="cstat-no" title="statement not covered" >        return <span class="fstat-no" title="function not covered" >function (factory) {</span> <span class="cstat-no" title="statement not covered" >window.MobileDetect = factory(); </span>};</span>
+    } else <span class="cstat-no" title="statement not covered">if (typeof define === 'function' &amp;&amp; define.amd) {</span>
+<span class="cstat-no" title="statement not covered">        return define;</span>
+    } else <span class="cstat-no" title="statement not covered">if (typeof window !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered">        return <span class="fstat-no" title="function not covered">function (factory) {</span> <span class="cstat-no" title="statement not covered">window.MobileDetect = factory(); </span>};</span>
     } else {
         // please file a bug if you get this error!
-<span class="cstat-no" title="statement not covered" >        throw new Error('unknown environment');</span>
+<span class="cstat-no" title="statement not covered">        throw new Error('unknown environment');</span>
     }
 })());
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 15:42:59 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 22:36:42 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
