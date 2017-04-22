@@ -1,4 +1,7 @@
-# test coverage for  [mobile-detect (v1.3.6)](http://hgoebl.github.io/mobile-detect.js/)  [![npm package](https://img.shields.io/npm/v/npmtest-mobile-detect.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-mobile-detect) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-mobile-detect.svg)](https://travis-ci.org/npmtest/node-npmtest-mobile-detect)
+# npmtest-mobile-detect
+
+#### basic test coverage for  [mobile-detect (v1.3.6)](http://hgoebl.github.io/mobile-detect.js/)  [![npm package](https://img.shields.io/npm/v/npmtest-mobile-detect.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-mobile-detect) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-mobile-detect.svg)](https://travis-ci.org/npmtest/node-npmtest-mobile-detect)
+
 #### Device detection (phone, tablet, desktop, mobile grade, os, versions)
 
 [![NPM](https://nodei.co/npm/mobile-detect.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/mobile-detect)
@@ -93,7 +96,8 @@
         "test": "grunt jasmine_node"
     },
     "typings": "mobile-detect",
-    "version": "1.3.6"
+    "version": "1.3.6",
+    "bin": {}
 }
 ```
 
